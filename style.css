@@ -10,7 +10,7 @@ body {
   width: 100vw;
   align-items: center;
   justify-content: center;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, #cbd5de 42%);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, #cbd5de 70%);
 }
 
 .countdown__message {
@@ -30,7 +30,7 @@ body {
   color: #4C6377;
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  font-size: 200px;
+  font-size: 120px;
   font-weight: 900;
   margin: 0 0.05em;
   padding: 0.2em 0;
