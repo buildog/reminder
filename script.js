@@ -4,7 +4,7 @@ const countDown = function () {
   const daysLeft = function (toDate) {
     dt1 = new Date();
     dt2 = new Date(toDate);
-    return Math.floor((Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) - Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate())) / (1000 * 60 * 60 * 24));
+    return Math.abs((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate())) / (1000 * 60 * 60 * 24));
   };
 
   // create the html for the countdown digits
@@ -13,9 +13,10 @@ const countDown = function () {
     let countHTML = "";
     const daysLeftInt = daysLeft(toDate);
     const digitsArr = (daysLeftInt + '').split('');
+    const subclass = daysLeftInt.toString().length > 2 ? 'three' : '';
 
     digitsArr.forEach(function (digit, index) {
-      countHTML += `<div class="countdown__digit">${digit}</div>`;
+      countHTML += `<div class="countdown__digit ${subclass}">${digit}</div>`;
     });
 
     // inject the html
@@ -35,7 +36,7 @@ const countDown = function () {
 
 const year = new Date().getFullYear();
 // enter the date you're counting down to mm/dd/yyyy
-countDown.init('09/26/2020');
+countDown.init('07/26/2021');
 
 
 /* Hearths */

@@ -30,7 +30,7 @@ body {
   color: #4C6377;
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  font-size: 80px;
+  font-size: 120px;
   font-weight: 900;
   margin: 0 0.05em;
   padding: 0.2em 0;
@@ -38,6 +38,9 @@ body {
   text-align: center;
   width: 1.2em;
 }
+
+.countdown__digit.three { font-size:  80px }
+
 .countdown__digit:after {
   background: rgba(16, 21, 26, 0.05);
   box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.2);
