@@ -1,10 +1,10 @@
 const countDown = function () {
 
-  // function to return difference in days between now and the date passed 
+  // function to return difference in days between now and the date passed
   const daysLeft = function (toDate) {
     dt1 = new Date();
     dt2 = new Date(toDate);
-    return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate())) / (1000 * 60 * 60 * 24));
+    return Math.floor((Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) - Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate())) / (1000 * 60 * 60 * 24));
   };
 
   // create the html for the countdown digits
@@ -35,7 +35,7 @@ const countDown = function () {
 
 const year = new Date().getFullYear();
 // enter the date you're counting down to mm/dd/yyyy
-countDown.init('09/26/' + year);
+countDown.init('09/26/2020');
 
 
 /* Hearths */
