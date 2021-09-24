@@ -8,35 +8,51 @@ const countDown = function () {
   };
 
   // create the html for the countdown digits
-  const createDigits = function (toDate) {
+  const createDigits = function (toDate, dd, today) {
+
 
     let countHTML = "";
     const daysLeftInt = daysLeft(toDate);
     const digitsArr = (daysLeftInt + '').split('');
-    const subclass = daysLeftInt.toString().length > 2 ? 'three' : '';
+    const diz = daysLeftInt.toString().length;
 
+    /* Countdown */
+    const subclass = diz > 2 ? 'three' : '';
     digitsArr.forEach(function (digit, index) {
       countHTML += `<div class="countdown__digit ${subclass}">${digit}</div>`;
     });
 
+    /* Messages */
+
+    if(daysLeftInt === 0) {
+      $('.countdown__message.primary').hide();
+    } else {
+      $('.countdown__message.primary').prepend(daysLeftInt > 1 ? 'days ': 'day ');
+
+    }
+
+    if(today === dd) {
+      const party = daysLeftInt === 0 ? 'anniversary' : 'moisniversaire'
+      $('.countdown-wrapper').append(`<div class="countdown__message moiniversaire">Today is our ${party} 🥳</div>`);
+    }
+
     // inject the html
-    const countdownEl = document.querySelector('.countdown');
-    countdownEl.innerHTML = countHTML;
+    $('.countdown').html(countHTML);
   };
 
 
   return {
-    init: function (date) {
-      // put something here
-      createDigits(date);
-    } };
-
-
+    init: function (mm, dd) {
+      const dt = new Date();
+      const yy = dt.getFullYear();
+      const today = dt.getDate().toString();
+      createDigits(`${mm}/${dd}/${yy}`, dd, today);
+    }
+  };
 }();
 
-const year = new Date().getFullYear();
-// enter the date you're counting down to mm/dd/yyyy
-countDown.init('07/26/2021');
+
+countDown.init('09', '26');
 
 
 /* Hearths */

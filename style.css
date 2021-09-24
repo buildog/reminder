@@ -22,6 +22,10 @@ body {
   text-align: center;
 }
 
+.countdown__message.moiniversaire {
+  font-weight: 600
+}
+
 .countdown__digit {
   background: #eaeef2;
   background-image: linear-gradient(180deg, #eaeef2 10%, #FFFFFF 100%);
