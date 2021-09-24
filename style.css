@@ -10,7 +10,7 @@ body {
   width: 100vw;
   align-items: center;
   justify-content: center;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, #cbd5de 70%);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, #cbd5de 60%);
 }
 
 .countdown__message {
