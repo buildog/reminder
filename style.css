@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,900&display=swap");
+body {
+  margin: 0;
+}
+
+.countdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1%, #cbd5de 42%);
+}
+
+.countdown__message {
+  color: #4C6377;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+  padding-top: 1em;
+  text-align: center;
+}
+
+.countdown__digit {
+  background: #eaeef2;
+  background-image: linear-gradient(180deg, #eaeef2 10%, #FFFFFF 100%);
+  border-radius: 0.25em;
+  box-shadow: 0 20px 30px -10px rgba(76, 99, 119, 0.1), inset 0 -1px 0 0 rgba(76, 99, 119, 0.3), inset 0 1px 0 0 #fff;
+  color: #4C6377;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+  margin: 0 0.05em;
+  padding: 0.2em 0;
+  position: relative;
+  text-align: center;
+  width: 1.2em;
+}
+.countdown__digit:after {
+  background: rgba(16, 21, 26, 0.05);
+  box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.2);
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.countdown__digit:before {
+  background: rgba(66, 86, 103, 0.01);
+  border-radius: 0.25em 0.25em 0 0;
+  bottom: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.countdown__list {
+  margin: 0;
+  padding: 0;
+}
+
+.countdown__list-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hearths */
+.bg_heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  top: -50%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -m-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.heart:before {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+.heart:after {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@-moz-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@-ms-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@keyframes love {
+  0% {
+    top: 110%;
+  }
+}
